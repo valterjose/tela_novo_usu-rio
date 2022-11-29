@@ -16,11 +16,11 @@ class Cadastrado extends StatelessWidget {
           // ignore: prefer_const_literals_to_create_immutables
           children: [
             Text(
-             textAlign: TextAlign.center,
-              'GREEN FINANCE!',
+              textAlign: TextAlign.center,
+              'GREEN',
               style: TextStyle(
-                fontSize: 40.0,
-                 color: Colors.green ,
+                fontSize: 50.0,
+                color: Colors.black,
                 fontWeight: FontWeight.bold,
                 //
               ),
@@ -29,19 +29,19 @@ class Cadastrado extends StatelessWidget {
               height: 20.0,
             ),
             Text(
-             textAlign: TextAlign.center,
+              textAlign: TextAlign.center,
               ' ESTAMOS SUPER FELIZES POR TER VOCÊ NO NOSSO TIME.',
               style: TextStyle(
-                fontSize: 25.0,
-                 color: Colors.green ,
-                fontWeight: FontWeight.bold,
+                fontSize: 18.0,
+                color: Colors.black,
+                //fontWeight: FontWeight.bold,
                 //
               ),
             ),
             SizedBox(
               height: 15.0,
             ),
-            Text(
+            /* Text(
                textAlign: TextAlign.center,
               'Fique a vontade para mexer no app e conte com agente no que precisar.',
               style: TextStyle(
@@ -50,32 +50,35 @@ class Cadastrado extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 
               ),
+            ),*/
+            SizedBox(
+              height: 60.0,
             ),
-            SizedBox(height: 20.0,),
-              ElevatedButton.icon(
-                icon: Icon(Icons.arrow_back),
-                label: Text(
-                  'VOLTAR',
-                  style: TextStyle(
-                    fontSize: 20.0,
-                    letterSpacing: 2.0,
-                  ),
+            ElevatedButton.icon(
+              icon: Icon(Icons.arrow_back),
+              label: Text(
+                'VOLTAR',
+                style: TextStyle(
+                  fontSize: 20.0,
+                  letterSpacing: 2.0,
                 ),
-                style: ElevatedButton.styleFrom(
-                  minimumSize: Size(360.0, 75.0),
-                  backgroundColor: Color.fromARGB(255, 234, 93, 12) ,
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return LoginPage();
-                      },
-                    ),
-                  );
-                },
               ),
+              style: ElevatedButton.styleFrom(
+                minimumSize: Size(360.0, 75.0),
+                backgroundColor: Colors.green,
+                 
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return LoginPage();
+                    },
+                  ),
+                );
+              },
+            ),
           ],
         ),
       ),

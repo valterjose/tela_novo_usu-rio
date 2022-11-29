@@ -23,14 +23,7 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(
               height: 20.0,
             ),
-            Text(
-              ' Bem-vindo!',
-              style: TextStyle(
-                fontSize: 40.0,
-                fontWeight: FontWeight.bold,
-                //
-              ),
-            ),
+
             SizedBox(
               height: 10.0,
             ),
@@ -56,9 +49,9 @@ class _LoginPageState extends State<LoginPage> {
               child: Container(
                 padding: EdgeInsets.all(12.0),
                 decoration: BoxDecoration(
-                  color: Colors.green,
-                  border: Border.all(color: Colors.green.shade900),
-                  borderRadius: BorderRadius.circular(5.0),
+                  color: Colors.white,
+                  border: Border.all(color: Colors.green.shade500),
+                  borderRadius: BorderRadius.circular(15.0),
                 ),
                 child: TextField(
                   decoration: InputDecoration(
@@ -74,9 +67,9 @@ class _LoginPageState extends State<LoginPage> {
               child: Container(
                 padding: EdgeInsets.all(12.0),
                 decoration: BoxDecoration(
-                  color: Colors.green,
-                  border: Border.all(color: Colors.white),
-                  borderRadius: BorderRadius.circular(5.0),
+                  color: Colors.white,
+                  border: Border.all(color: Colors.green),
+                  borderRadius: BorderRadius.circular(15.0),
                 ),
                 child: TextField(
                   //autofocus:true ,
@@ -84,7 +77,7 @@ class _LoginPageState extends State<LoginPage> {
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     hintText: 'Senha',
-                   // icon: Icon(Icons.key),
+                    // icon: Icon(Icons.key),
                   ),
                 ),
               ),
@@ -108,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 style: ElevatedButton.styleFrom(
                   minimumSize: Size(360.0, 75.0),
-                  backgroundColor: Colors.deepPurple,
+                  backgroundColor: Colors.green,
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -123,9 +116,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             SizedBox(height: 25.0),
-            Icon(
-              Icons.arrow_back,
-            ),
+           
           ],
         ),
       ),
