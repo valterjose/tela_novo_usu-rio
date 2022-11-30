@@ -1,6 +1,9 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last
 
 import 'package:flutter/material.dart';
+
+import 'package:tela_teste/senha.dart';
+
 import 'cadastrado.dart';
 
 class LoginPage extends StatefulWidget {
@@ -115,8 +118,29 @@ class _LoginPageState extends State<LoginPage> {
                 },
               ),
             ),
+            Row(
+              children: [
+               Padding(padding: EdgeInsets.symmetric(horizontal: 120.0)) ,
+                TextButton(
+                  child: Text(
+                    'Recuperar senha?'
+                    ),
+                     onPressed: () {
+                       Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return Senha();
+                      },
+                    ),
+                  );
+                      
+                     }
+                     ),
+                     
+              ],
+            ),
             SizedBox(height: 25.0),
-           
           ],
         ),
       ),

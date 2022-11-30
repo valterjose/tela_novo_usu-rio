@@ -1,8 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:tela_teste/login_page.dart';
 
+import 'package:tela_teste/login_page.dart';
+import 'package:tela_teste/senha.dart';
 void main() {
   runApp(const MyApp());
 }
