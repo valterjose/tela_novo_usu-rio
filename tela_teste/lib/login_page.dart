@@ -21,12 +21,11 @@ class _LoginPageState extends State<LoginPage> {
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          // ignore: prefer_const_literals_to_create_immutables
-          children: [
-            SizedBox(
-              height: 20.0,
-            ),
+          [
+        
 
+          ],
+            ),
             SizedBox(
               height: 10.0,
             ),
@@ -120,24 +119,19 @@ class _LoginPageState extends State<LoginPage> {
             ),
             Row(
               children: [
-               Padding(padding: EdgeInsets.symmetric(horizontal: 120.0)) ,
+                Padding(padding: EdgeInsets.symmetric(horizontal: 120.0)),
                 TextButton(
-                  child: Text(
-                    'Recuperar senha?'
-                    ),
-                     onPressed: () {
-                       Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return Senha();
-                      },
-                    ),
-                  );
-                      
-                     }
-                     ),
-                     
+                    child: Text('Recuperar senha?'),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return Senha();
+                          },
+                        ),
+                      );
+                    }),
               ],
             ),
             SizedBox(height: 25.0),
