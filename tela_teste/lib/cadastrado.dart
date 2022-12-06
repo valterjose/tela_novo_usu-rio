@@ -55,19 +55,18 @@ class Cadastrado extends StatelessWidget {
             SizedBox(
               height: 60.0,
             ),
-            ElevatedButton.icon(
-              icon: Icon(Icons.arrow_back),
-              label: Text(
+             Container(
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.green,
+                minimumSize: Size(300.0, 70.0),
+              ),
+              child: Text(
                 'VOLTAR',
                 style: TextStyle(
                   fontSize: 20.0,
-                  letterSpacing: 2.0,
+                  color: Colors.white,
                 ),
-              ),
-              style: ElevatedButton.styleFrom(
-                minimumSize: Size(360.0, 75.0),
-                backgroundColor: Colors.green,
-                 
               ),
               onPressed: () {
                 Navigator.push(
@@ -80,6 +79,7 @@ class Cadastrado extends StatelessWidget {
                 );
               },
             ),
+             ),
           ],
         ),
       ),

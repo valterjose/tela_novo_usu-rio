@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, sort_child_properties_last
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
 
@@ -21,19 +21,13 @@ class _LoginPageState extends State<LoginPage> {
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          [
-        
-
-          ],
-            ),
-            SizedBox(
-              height: 10.0,
-            ),
+          children: [
+            SizedBox(height: 10.0),
             Text(
               'Cadrastre-se no Green agora',
               style: TextStyle(
                 //letterSpacing: 1.0,
-                fontSize: 25.0,
+                fontSize: 28.0,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -85,25 +79,23 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             SizedBox(
-              height: 10.0,
+              height: 20.0,
             ),
             /* Usando elevatedButton para finalizar o cadastro de novo usuário,
             caso precise fazer qualquer alteração estou a  disposição*/
 
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: ElevatedButton.icon(
-                icon: Icon(Icons.ads_click),
-                label: Text(
+            Container(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.green,
+                  minimumSize: Size(350.0, 70.0),
+                ),
+                child: Text(
                   'CADASTRAR',
                   style: TextStyle(
                     fontSize: 20.0,
-                    letterSpacing: 2.0,
+                    color: Colors.white,
                   ),
-                ),
-                style: ElevatedButton.styleFrom(
-                  minimumSize: Size(360.0, 75.0),
-                  backgroundColor: Colors.green,
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -116,6 +108,10 @@ class _LoginPageState extends State<LoginPage> {
                   );
                 },
               ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(10.0),
             ),
             Row(
               children: [
@@ -134,6 +130,7 @@ class _LoginPageState extends State<LoginPage> {
                     }),
               ],
             ),
+
             SizedBox(height: 25.0),
           ],
         ),

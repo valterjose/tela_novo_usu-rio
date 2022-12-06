@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, unused_import
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, unused_import, unused_label
 
 import 'package:flutter/material.dart';
 
@@ -6,34 +6,25 @@ import 'package:tela_teste/senha.dart';
 
 import 'cadastrado.dart';
 import 'login_page.dart';
-  class Senha extends StatelessWidget {
+
+class Senha extends StatelessWidget {
   const Senha({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        leading: Icon(
-          Icons.arrow_back,
-          color: Colors.black38,
-          
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+          ),
+          color: Colors.black,
+          onPressed: () {},
         ),
       ),
-      backgroundColor: Colors.white,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(
-            child: CircleAvatar(
-              radius: MediaQuery.of(context).size.width / 5,
-              backgroundColor: Colors.green,
-              child: Icon(
-                Icons.lock_open,color: Colors.white,
-                size: 90.0,
-              ),
-            ),
-          ),
           SizedBox(
             height: 10.0,
           ),
@@ -65,7 +56,7 @@ import 'login_page.dart';
                 color: Colors.white,
               ),
               child: TextField(
-                obscureText: true,
+                obscureText: false,
                 decoration: InputDecoration(
                   border: InputBorder.none,
                   hintText: 'Email',
@@ -85,11 +76,13 @@ import 'login_page.dart';
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.green,
                 minimumSize: Size(300.0, 70.0),
-            
               ),
               child: Text(
                 'RECUPERAR AGORA',
-                style: TextStyle(fontSize: 20.0),
+                style: TextStyle(
+                  fontSize: 20.0,
+                  color: Colors.white,
+                ),
               ),
               onPressed: () {
                 Navigator.push(
